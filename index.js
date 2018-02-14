@@ -1,5 +1,5 @@
 
-export class KdMoment {
+class KdMoment {
 
     constructor (config = {}) {
 
@@ -16,8 +16,8 @@ export class KdMoment {
 
         } else if ( this._isString(input) ) {
             let inputs = input.split('-')
-            
-            [inputYear, inputMonth, inputDate] = inputs
+
+            let [inputYear, inputMonth, inputDate] = inputs
             date = new Date(inputYear, Number(inputMonth - 1), inputDate)
 
         } else {
@@ -99,3 +99,5 @@ export class KdMoment {
         return value.toString().length === 10
     }
 }
+
+console.log(new KdMoment({input: '2018-3-4'}).get())
