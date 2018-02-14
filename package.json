@@ -1,0 +1,16 @@
+{
+  "name": "kdmoment",
+  "version": "1.0.0",
+  "description": "time utils",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "pocket",
+    "moment",
+    "time",
+    "utils"
+  ],
+  "author": "dsmjoy",
+  "license": "ISC"
+}
