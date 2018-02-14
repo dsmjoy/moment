@@ -1,5 +1,5 @@
 
-class KdMoment {
+export class KdMoment {
 
     constructor (config = {}) {
 
@@ -99,5 +99,3 @@ class KdMoment {
         return value.toString().length === 10
     }
 }
-
-console.log(new KdMoment({input: '2018-3-4'}).get())
