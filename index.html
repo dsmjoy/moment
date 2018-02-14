@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        import KdMoment from './index.js'
+        console.log(new KdMoment().get())
+        console.log(new KdMoment({y: 2018, M: 2, d: 13, format: 'yyyy-mm-dd hh:mm:ss'}).get())
+        console.log(new KdMoment({y: 2018, M: 2, d: 13, format: 'hh:mm:ss', input: 1518613223673}).get())
+        console.log(new KdMoment({h: 3, format: 'timestamp', input: '2018-2-13'}).get())    // 2018-2-13 3:此分:此秒
+    </script>
+</body>
+</html>

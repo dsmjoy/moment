@@ -1,5 +1,5 @@
 
-export class KdMoment {
+export default class KdMoment {
 
     constructor (config = {}) {
 
@@ -51,28 +51,27 @@ export class KdMoment {
     }
 
     output (date) {
-        let M = this._leadingZero(Number(this.M) + 1)
         
         switch (this.format) {
             case 'timestamp': 
                 return date.getTime()
 
             case 'yyyy-mm-dd':
-                return `${this.y}-${M}-${this.d}`
+                return `${this.y}-${this.M}-${this.d}`
             case 'mm-dd':
-                return `${M}-${this.d}`
+                return `${this.M}-${this.d}`
 
             case 'hh:mm:ss':
-                return `${this.h}:${M}:${this.s}`
+                return `${this.h}:${this.M}:${this.s}`
             case 'mm:ss':
-                return `${M}:${this.s}`
+                return `${this.M}:${this.s}`
 
             case 'yyyy-mm-dd hh:mm':
-                return `${this.y}-${M}-${this.d} ${this.h}:${this.m}`
+                return `${this.y}-${this.M}-${this.d} ${this.h}:${this.m}`
             case 'yyyy-mm-dd mm:ss':
-                return `${this.y}-${M}-${this.d} ${this.m}:${this.s}`
+                return `${this.y}-${this.M}-${this.d} ${this.m}:${this.s}`
             case 'yyyy-mm-dd hh:mm:ss':
-                return `${this.y}-${M}-${this.d} ${this.h}:${this.m}:${this.s}`
+                return `${this.y}-${this.M}-${this.d} ${this.h}:${this.m}:${this.s}`
             default:
                 return date
         }
