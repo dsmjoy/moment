@@ -15,11 +15,9 @@ export class KdMoment {
             }
 
         } else if ( this._isString(input) ) {
-            let inputs = input.split('-'),
-                inputYear = inputs[0],
-                inputMonth = inputs[1],
-                inputDate = inputs[2]
-
+            let inputs = input.split('-')
+            
+            [inputYear, inputMonth, inputDate] = inputs
             date = new Date(inputYear, Number(inputMonth - 1), inputDate)
 
         } else {
